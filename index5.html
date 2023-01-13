@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .red{
+            background-color: red;
+            color: white;
+        }
+        .green{
+            background-color: green;
+            color: white;
+        }
+    </style>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+    <script type="text/babel">
+         
+         
+         class compA extends React.component {
+            render(){
+                return(
+                    <div className="red">
+                        <p> texto do compA</p>
+                        </div>
+                )
+                    
+               
+            }
+         }
+         class compB extends React.component {
+            render(){
+                return(
+                    <div className="green">
+                        <p> texto do compB</p>
+                        </div>
+                )
+                    
+               
+            }
+         }
+         class APP extends React.component {
+            render(){
+                return(
+                    <div>
+                        <compA/>
+                       <compB/>
+                        </div>
+                )
+                    
+               
+            }
+         }
+         
+        const root =document.getElementById("root");
+        ReactDom.render( < APP/>,root)
+    </script>
+</body>
+</html>
